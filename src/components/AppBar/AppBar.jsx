@@ -1,14 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import s from './AppBar.module.css';
 
 export const AppBar = () => {
   return (
     <header>
       <nav>
-        <ul>
-          <li>
+        <ul className={s.Nav_list}>
+          <li className={s.Nav_item}>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          <li className={s.Nav_item}>
             <NavLink to="/movies">Movies</NavLink>
           </li>
         </ul>

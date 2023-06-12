@@ -1,0 +1,13 @@
+.Reviews_container {
+  background-color: #cac3a4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Reviews_item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import apiGet from '../api';
+import apiGet from '../../api';
+import s from './MovieDetails.module.css';
 
 export default function MoviesDetails() {
   const { movieId } = useParams();
@@ -20,7 +21,7 @@ export default function MoviesDetails() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={s.MovieDetails_container}>
       {movieInfo && (movieInfo.title || movieInfo.name)}
       <Link to="cast">Cast</Link>
       <Link to="reviews">Reviews</Link>

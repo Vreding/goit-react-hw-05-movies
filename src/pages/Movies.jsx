@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Searchbar from 'components/SearchBar';
+import Searchbar from 'components/SearchBar/SearchBar';
 import apiGet from '../api';
 import { Link } from 'react-router-dom';
 
