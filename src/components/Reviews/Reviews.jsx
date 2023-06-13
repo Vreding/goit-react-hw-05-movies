@@ -22,7 +22,7 @@ export const Reviews = () => {
 
   return (
     <>
-      {reviews && (
+      {reviews && reviews.length > 0 ? (
         <div className={s.Reviews_container}>
           <h1>Reviews</h1>
           <ul>
@@ -34,6 +34,8 @@ export const Reviews = () => {
             ))}
           </ul>
         </div>
+      ) : (
+        <div className={s.Reviews_container}>No reviews</div>
       )}
     </>
   );

@@ -6,14 +6,16 @@ export default function Home() {
   const [movies, setMovie] = useState([]);
 
   useEffect(() => {
-    (async () => {
+    const fetchTrends = async () => {
       try {
         const movie = await apiGet.popular();
         setMovie(movie);
       } catch (error) {
         console.error(error.message);
       }
-    })();
+    };
+
+    fetchTrends();
   }, []);
 
   return (
