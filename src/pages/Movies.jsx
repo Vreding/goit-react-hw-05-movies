@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Searchbar from 'components/SearchBar/SearchBar';
 import apiGet from '../api';
-import { Link } from 'react-router-dom';
+import { MovieList } from 'components/MovieList/MovieList';
 
 export default function Movie() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,13 +45,7 @@ export default function Movie() {
       {movieList.length > 0 && (
         <>
           <h1>Movie List</h1>
-          <ul>
-            {movieList.map(movie => (
-              <li key={movie.id}>
-                <Link to={`${movie.id}`}>{movie.title || movie.name}</Link>
-              </li>
-            ))}
-          </ul>
+          <MovieList movies={movieList} />
         </>
       )}
     </>

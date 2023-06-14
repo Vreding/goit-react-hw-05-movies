@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import apiGet from '../../api';
 import s from './Reviews.module.css';
 
-export const Reviews = () => {
+export default function Reviews() {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState(null);
 
@@ -19,6 +19,10 @@ export const Reviews = () => {
 
     fetchReviews();
   }, [movieId]);
+
+  if (!reviews) {
+    return;
+  }
 
   return (
     <>
@@ -39,4 +43,4 @@ export const Reviews = () => {
       )}
     </>
   );
-};
+}

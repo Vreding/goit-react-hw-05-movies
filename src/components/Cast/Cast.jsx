@@ -4,7 +4,7 @@ import apiGet from '../../api';
 import s from './Cast.module.css';
 import placeholderImage from '../../servis/images.jpeg';
 
-export const Cast = () => {
+export default function Cast() {
   const { movieId } = useParams();
   const [cast, setCast] = useState(null);
 
@@ -48,4 +48,4 @@ export const Cast = () => {
       )}
     </div>
   );
-};
+}
